@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Link Shortener</title>
+</head>
+<body>
+<div align="center">
+    <h1>Link Shortener</h1>
+    <form th:action="@{/link}" method="post" th:object="${url}">
+        <label>Original URL:</label>
+        <input type="text" th:field="*{originalUrl}" />
+        <button type="submit">Submit</button><br/><br/>
+ 
+        <label>Short URL:</label>
+        <input type="text" th:field="*{shortUrl}" readonly="readonly"/><br/>    
+    </form>
+</div>
+</body>
+</html>
